@@ -1,0 +1,21 @@
+.custom-card {
+    border-radius: 0.5rem;
+    box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.8);
+
+}
+
+.custom-card img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.custom-card img:hover {
+    transform: scale(1.08);
+    transition: transform 0.5s;
+    border-radius: 1rem;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px #000000;
+    letter-spacing: 0.5rem;
+  }
+  

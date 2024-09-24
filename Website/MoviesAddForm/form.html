@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet"  href="/form.css">
+    <script src="https://kit.fontawesome.com/2dbb9fda21.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Movie Form</title>
+</head>
+<body>
+    
+
+    <div class="container-fluid main">
+        <div class=".container sub1 px-5 pt-5 pb-2 bg-transparent">
+            <nav class="navbar navbar-expand-lg navbar-expand-xl navbar-expand-md navbar-light bg-transparent px-2 py-2 font-weight-bold ">
+                <a class="navbar-brand font-italic font-weight-bold" href="">IMDB Website <i class="fas fa-home"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse font-italic" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Actors</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Producers</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              
+    
+        </div>
+
+        <div class=".container sub2 px-5 bg-transparent">
+                <h2 class="text-center text-capitalize font-weight-bold"><b>Enter Movie Details</b></h2>
+        </div>
+
+        <div class="container px-5 py-5 justify-content-center">
+
+          <form>
+            
+              <div class="form-group ">
+                <label for="movieName" class="font-weight-bold">Movie Name</label>
+                <input type="text" class="form-control bg-light text-secondary" id="movieName" placeholder="Enter Name of the Movie">
+              </div>
+
+
+              <div class="form-group ">
+                <label for="movieYear" class="font-weight-bold">Year of Release</label>
+                <input type="text" class="form-control bg-light text-secondary" id="movieYear" placeholder="Format is YYYY eg: 2000">
+              </div>
+            
+          
+              <div class="form-group">
+                  <div class="form-row">
+                      <div class="form-group col-12 font-weight-bold">
+                        <label for="movieActorList">Actors</label>
+                        </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-10">
+                        <select class="form-control bg-light" id="movieActorList">
+                          <option value="">Select Actor from list</option>
+                          <option value="">Ramacharan</option>
+                          <option value="">Olivia</option>
+                          <option value="">Rashmika</option>
+                          <option value="">Allu Arjun</option>
+                          <option value="">Kiara</option>
+                          <option value="">Rajnikant</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-1 ml-auto mr-3">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addActor"> Add Actor </button>
+                      </div>
+
+                      <div class="modal fade my-5" id="addActor" tabindex="-1" role="dialog" aria-labelledby="addActorLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="addActorLabel">Add New Actor</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              
+                              <form id="actorForm" action="" class="needs-validation" novalidate>
+                                <div class="form-group">
+                                  <label for="actorName" class="font-weight-bold">Name</label>
+                                  <input type="text" class="form-control bg-light text-secondary" id="actorName" placeholder="Enter Actor Name here" name="actorName" required>
+                                  <div class="invalid-feedback">Please enter Actor Name</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="actorBio" class="font-weight-bold">Bio</label>
+                                  <input type="password" class="form-control bg-light text-secondary" id="actorBio" placeholder="Enter Actor Bio here" name="actorBio">
+                                </div>
+                                <div class="form-group">
+                                  <label for="actorDob" class="font-weight-bold">Date of Birth</label>
+                                  <input type="datetime-local" class="form-control" id="actorDob" name="actorDob" required>
+                                  <div class="invalid-feedback">Please enter the actor's date of birth.</div>
+                                </div>
+                                <div class="form-group ">
+                                  <label for="radio" class="font-weight-bold">Actor Gender</label>
+                                  <div class="row mx-5">
+                                  <div class="form-check col-2">
+                                    <input class="form-check-input" type="radio" name="radio" id="actorGenderMale" value="option1" required>
+                                    <label class="form-check-label" for="actorGenderMale">
+                                      Male
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-2 ml-5">
+                                    <input class="form-check-input" type="radio" name="radio" id="actorGenderFemale" value="option2">
+                                    <label class="form-check-label" for="actorGenderFemale">
+                                      Female
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-2 ml-5">
+                                    <input class="form-check-input" type="radio" name="radio" id="actorGenderOther" value="option3" >
+                                    <label class="form-check-label" for="actorGenderOther">
+                                      Other
+                                    </label>
+                                  </div>
+                                  </div><br>
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                              </form>
+
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                              <div class="btn-group">
+                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+              </div>
+
+
+
+              <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-12 font-weight-bold">
+                      <label for="movieProducer">Producer</label>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-10">
+                      <select class="form-control bg-light" id="movieProducer" >
+                        <option value="">Select Producer from list</option>
+                        <option value="">S.S. Rajamauli</option>
+                        <option value="">Sunderlal</option>
+                        <option value="">Mote & Goswami</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-1 ml-auto mr-5">
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addProducer">Add Producer</button>
+                    </div>
+
+
+                    
+                    <div class="modal fade my-5" id="addProducer" tabindex="-1" role="dialog" aria-labelledby="addProducerLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="addProducerLabel">Add New Producer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            
+                            <form>
+          
+                                  <div class="form-group ">
+                                    <label for="producerName" class="font-weight-bold">Producer Name</label>
+                                    <input type="text" class="form-control bg-light text-secondary" id="producerName" placeholder="Enter Name of Producer">
+                                  </div>
+                    
+                    
+                                  <div class="form-group ">
+                                    <label for="producerBio" class="font-weight-bold">Bio</label>
+                                    <input type="text" class="form-control bg-light text-secondary" id="producerBio" placeholder="Enter Producer Bio">
+                                  </div>
+              
+
+                                    <div class="form-group">
+                                      <label for="producerDob" class="font-weight-bold">Producer Date of Birth</label>
+                                      <input type="datetime-local" class="form-control" id="producerDob" name="producerDob" >
+                                    </div>
+                                    <div class="form-group ">
+                                      <label for="radio" class="font-weight-bold">Actor Gender</label>
+                                      <div class="row mx-5">
+                                      <div class="form-check col-2">
+                                        <input class="form-check-input" type="radio" name="radio" id="producerGenderMale" value="option1">
+                                        <label class="form-check-label" for="producerGenderMale">
+                                          Male
+                                        </label>
+                                      </div>
+                                      <div class="form-check col-2">
+                                        <input class="form-check-input" type="radio" name="radio" id="producerGenderFemale" value="option2">
+                                        <label class="form-check-label" for="producerGenderFemale">
+                                          Female
+                                        </label>
+                                      </div>
+                                      <div class="form-check col-2">
+                                        <input class="form-check-input" type="radio" name="radio" id="producerGenderOther" value="option1">
+                                        <label class="form-check-label" for="producerGenderOther">
+                                          Others
+                                        </label>
+                                      </div>
+                                      </div>
+                                    </div>
+
+
+                              </form>
+                          </div>
+                          <div class="modal-footer justify-content-center">
+                            <div class="btn-group">
+                               <button type="button" class="btn btn-secondary mr-5" data-dismiss="modal">Close</button>
+                               <button type="submit" class="btn btn-info btn-block ml-5" >Submit</button>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <div class="form-row">
+                  <div class="form-group col-12 font-weight-bold">
+                    <label for="movieGenreList">Genres</label>
+                    </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-12">
+                    <select class="form-control bg-light" id="movieGenreList">
+                      <option value="">Select Genres from list</option>
+                      <option value="">Horror</option>
+                      <option value="">Fantasy</option>
+                      <option value="">Fiction</option>
+                      <option value="">Love</option>
+                    </select>
+                  </div>
+              </div>
+          </div>
+
+              
+          <div class="form-group ">
+            <label for="moviePlot" class="font-weight-bold">Plot</label>
+            <input type="text" class="form-control bg-light text-secondary" id="moviePlot" placeholder="Enter details of Plot for Movie">
+          </div>
+        
+    
+              <div class="form-group">
+                <label for="movieCoverImage" class="font-weight-bold">Upload Cover Image</label>
+                <input type="file" class="form-control-file bg-light"  id="movieCoverImage">
+              </div>
+
+
+              <div class="form-group mx-0 px-0 my-5 col-3">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+              </div>
+            
+          </form>
+          
+
+
+
+
+
+
+
+
+        </div>
+          
+
+
+        <script>
+          // Disable form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Get the forms we want to add validation styles to
+              var forms = document.getElementsById('actorForm');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+
+        
+          </script> 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+          
+</body>
+</html>

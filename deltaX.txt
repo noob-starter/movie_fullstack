@@ -1,0 +1,11 @@
+It is a Product Based Startup
+Founder      - Akshay Surve (CEO)  and  Ravi Kabra
+Interviewers - Akshay Kumbhar and Vishnudevi
+Products     - Bizgain ,  Creative Builder ,   LeadX   , DeltaX Assistent
+Favourite line - Bullshit-free ( make mistakes and correct them )
+
+Bootcamp  -  Dev Environment setup , Git , 
+(self paced) Backend  : C sharp + SQL + Restful API in .net core using BDD
+	     Frontend : UI development + SPAs using VUE Js
+
+mail  -  campus.engg@deltax.com
